@@ -14,12 +14,17 @@ st.set_page_config(
 )
 
 # ========================
-# 1. Cambiar color de fondo
+# 1. Cambiar fondo y color de texto
 # ========================
-page_bg = """
+page_style = """
 <style>
     .stApp {
         background-color: #582f0e;
+        color: #c9ada7;
+    }
+    /* Color para títulos y subtítulos */
+    h1, h2, h3, h4, h5, h6, p, div, span, label {
+        color: #c9ada7 !important;
     }
     /* Centrar cámara */
     .camera-container {
@@ -34,7 +39,7 @@ page_bg = """
     }
 </style>
 """
-st.markdown(page_bg, unsafe_allow_html=True)
+st.markdown(page_style, unsafe_allow_html=True)
 
 
 # Función para cargar el modelo YOLOv5
